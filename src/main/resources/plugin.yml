@@ -1,0 +1,4 @@
+name: GiantSpawnPlugin
+version: '${project.version}'
+main: com.github.trueno13954.giantspawn.GiantSpawnPlugin
+api-version: '1.20'
