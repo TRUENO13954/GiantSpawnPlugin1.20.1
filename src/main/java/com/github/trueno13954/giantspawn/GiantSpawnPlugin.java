@@ -5,14 +5,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public final class GiantSpawnPlugin extends JavaPlugin {
 
-    private static JavaPlugin plugin;
-    private Listeners listeners;
 
     @Override
     public void onEnable() {
         // Plugin startup logic
-        this.listeners = new Listeners();
-        Bukkit.getPluginManager().registerEvents(this.listeners, this);
+        Listeners listeners = new Listeners();
+        Bukkit.getPluginManager().registerEvents(listeners, this);
 
         super.onEnable();
 
@@ -22,8 +20,5 @@ public final class GiantSpawnPlugin extends JavaPlugin {
     public void onDisable() {
         // Plugin shutdown logic
         super.onDisable();
-    }
-    public static JavaPlugin getPlugin(){
-        return plugin;
     }
 }
