@@ -1,5 +1,6 @@
 package com.github.trueno13954.giantspawn;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.EntityType;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,8 +23,7 @@ public class Listeners implements Listener {
             num--;
             if (num == 0) {
                 e.setCancelled(true);
-
-
+                Bukkit.broadcastMessage("生まれたよ");
             }
         }
     }
