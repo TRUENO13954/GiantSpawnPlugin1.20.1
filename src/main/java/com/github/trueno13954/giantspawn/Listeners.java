@@ -21,6 +21,7 @@ public class Listeners implements Listener {
     public void onSpawnZombie(EntitySpawnEvent e) {
         if (e.getEntityType() == EntityType.ZOMBIE) {
             num--;
+            Bukkit.broadcastMessage("今" + num);
             if (num == 0) {
                 e.setCancelled(true);
                 Bukkit.broadcastMessage("生まれたよ");
