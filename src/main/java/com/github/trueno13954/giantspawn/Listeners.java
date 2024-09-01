@@ -10,12 +10,8 @@ import java.util.Random;
 
 public class Listeners implements Listener {
 
-    private static int num;
-
-    public static void main(String[] args) {
-        Random rand = new Random();
-        num = rand.nextInt(50) + 100;
-    }
+    Random rand = new Random();
+    int num = rand.nextInt(50) + 100;
 
     @EventHandler
     public void onSpawnZombie(EntitySpawnEvent e) {
@@ -25,6 +21,7 @@ public class Listeners implements Listener {
             if (num == 0) {
                 e.setCancelled(true);
                 Bukkit.broadcastMessage("生まれたよ");
+                
             }
         }
     }
