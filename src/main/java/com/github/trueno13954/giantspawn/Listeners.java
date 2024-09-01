@@ -21,7 +21,6 @@ public class Listeners implements Listener {
             if (num == 0) {
                 e.setCancelled(true);
                 Bukkit.broadcastMessage("生まれたよ");
-                
             }
         }
     }
